@@ -1,0 +1,15 @@
+---
+  - name: Include vars file "users"
+    include_vars : vars/users.yml
+
+  - name: Create user "{{ item.name }}"
+    when: {{ item.name }} is defined
+    user : name={{ item.name }} shell=/usr/bin/{{ item.shell }}
+    with_items: users
+
+  - name : "{{ item.name }} become sudoer"
+    when : item.sudoer == yes
+    template: src=templates/sudoer.j2 dest=/etc/sudoers.d/{{ item.name }}-sudoer validate='visudo -cf %s'
+    with_items : users
+
+...

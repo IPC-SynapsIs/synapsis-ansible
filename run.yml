@@ -1,0 +1,10 @@
+---
+  - name: Configure new remote machine
+    hosts: docker 
+    remote_user: root
+    roles : 
+      - utils
+      - users
+
+
+...

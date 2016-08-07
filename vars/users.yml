@@ -1,0 +1,39 @@
+---
+  users: 
+    - name: mbasri
+      sudoer: yes
+      shell: bash
+    
+    - name: tcatrain
+      sudoer: yes
+      shell: bash
+    
+    - name: omiton
+      sudoer: no
+      shell: bash
+    
+    - name: malaoui
+      sudoer: no
+      shell: bash
+    
+    - name: itogui
+      sudoer: no
+      shell: bash
+    
+    - name: aikounga
+      sudoer: no
+      shell: bash
+    
+    - name: athomine
+      sudoer: no
+      shell: bash
+    
+    - name: gngonpa
+      sudoer: no
+      shell: bash
+    
+    - name: rabib
+      sudoer: no
+      shell: bash
+
+...
